@@ -1,3 +1,4 @@
+<?php 
     if (!function_exists('curl_request')) {
         /**
          * Return response after sending a curl request
@@ -30,7 +31,7 @@
             return ['header_code' => $header_code, 'body' => $output];
         }
     }
-    $webhook_url = 'https://hooks.slack.com/services/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';
+    $webhook_url = "INSERT SLACK WEBHOOK";
     $payload =  [
 
         "attachments" => [
@@ -39,70 +40,20 @@
 
                 "color" => "#47d147",
 
-                "title" => "Report QuickBit, QuickBit Payment Gateway and PSPs : "
+                "title" => "Report  : "
             ],
             [
                 "fields" => [
                     [
-                        "title" => "Sales QuickBit - Decta",
+                        "title" => "Sales",
                         "value" => "6565654",
-                        "short" => false
-                    ],
-                    [
-                        "title" => "Sales QuickBit Payment Gateway - Decta",
-                        "value" => "654654",
-                        "short" => false
-                    ],
-                    [
-                        "title" => "Sales Decta",
-                        "value" => "6546546",
-                        "short" => false
-                    ],
-                    [
-                        "title" => "Sales QuickBit - Secure Trading",
-                        "value" => "546546",
-                        "short" => false
-                    ],
-                    [
-                        "title" => "Sales QuickBit Payment Gateway - Secure Trading",
-                        "value" => "225582",
-                        "short" => false
-                    ],
-                    [
-                        "title" => "Sales Secure Trading",
-                        "value" => "9585858",
                         "short" => false
                     ],
                 ],
                 "color" => "#47d147",
                 "title" => "Total sales"
             ],
-            [
-                "fields" => [
-                    [
-                        "title" => "Refunds QuickBit - Decta",
-                        "value" => "1221",
-                        "short" => false
-                    ],
-                    [
-                        "title" => "Refunds QuickBit Payment Gateway - Decta",
-                        "value" => "5454",
-                        "short" => false
-                    ],
-                    [
-                        "title" => "Refunds QuickBit - Secure Trading",
-                        "value" => "65656",
-                        "short" => false
-                    ],
-                    [
-                        "title" => "Refunds QuickBit Payment Gateway - Secure Trading",
-                        "value" => "76565",
-                        "short" => false
-                    ]
-                ],
-                "color" => "#ff6666",
-                "title" => "Total Refunds"
-            ]
+            
         ]
     ];
 
@@ -118,3 +69,5 @@
     );
 
     dump($status);
+
+?>
